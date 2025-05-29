@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>TimeTamer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>SyncSchedulet</h1>
+
+        <label>Select Day:
+            <select id="day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+        </label>
+
+        <div class="input-group">
+            <input type="time" id="startTime" />
+            <input type="time" id="endTime" />
+            <input type="text" id="activity" placeholder="Activity name" />
+            <input type="hidden" id="editIndex" value="-1" />
+            <button onclick="addOrUpdateActivity()" id="submitBtn">Add</button>
+        </div>
+
+        <h2>Today's Schedule</h2>
+        <ul id="activityList"></ul>
+        <button onclick="saveTimetable()">Save Timetable</button>
+        <hr />
+
+        <h2>View Timetable</h2>
+        <label>Choose Day:
+            <select id="viewDay">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+            <button onclick="viewTimetable()">View</button>
+        </label>
+        <ul id="viewList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
