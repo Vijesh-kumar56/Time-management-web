@@ -8,8 +8,11 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>SyncSchedulet</h1>
+    <div class="container" id="mainApp" style="display: none;">
+        <div class="header">
+            <h1>SyncSchedule</h1>
+            <button onclick="toggleTheme()" id="themeBtn">🌙</button>
+        </div>
 
         <label>Select Day:
             <select id="day">
@@ -51,6 +54,8 @@
         </label>
         <ul id="viewList"></ul>
     </div>
+
+    <div id="toast" class="toast"></div>
 
     <script src="script.js"></script>
 </body>
