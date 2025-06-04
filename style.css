@@ -1,8 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
     margin: 0;
     padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+    background: #f4f4f4;
+    color: #000;
+}
+
+body.dark {
+    background: #121212;
+    color: #fff;
 }
 
 .container {
@@ -14,10 +24,14 @@ body {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
+body.dark .container {
+    background: #1f1f1f;
+    color: #fff;
+}
+
 h1,
 h2 {
     text-align: center;
-    color: #333;
 }
 
 .input-group {
@@ -76,4 +90,27 @@ ul li button:last-child {
 
 ul li button:hover {
     opacity: 0.8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 999;
+}
+
+body.dark .login-screen {
+    background: #1f1f1f;
 }
